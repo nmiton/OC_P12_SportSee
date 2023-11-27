@@ -66,7 +66,6 @@ body {
 			justify-content: space-between;
 			gap: 30px;
 		}
-	
 	} 
 
 	
@@ -79,12 +78,10 @@ body {
 
 		> div {
 			width: 100%;
-		
 		}
 
 		@media screen and (min-width: 1400px) {
 				flex-direction: row;
-
 		}
 	}
 }
@@ -96,8 +93,8 @@ body {
     transform: translate(-50%, -50%);
     font-size: 50px;
     color: black;
-	@media screen and (max-width: 1000px)
-	{
+	
+	@media screen and (max-width: 1000px){
 		left: 50%; font-size: 25px; 
 	}
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './Home';
+import Dashboard from './components/Dashboard/Dashboard';
 
 import {
   createBrowserRouter,
@@ -10,8 +11,13 @@ import {
 
 const path = createBrowserRouter([
   {
-    path: "/user/:id",
+    path: "/",
     element: <Home />,
+    errorElement: <Home />
+  },
+  {
+    path: "/user/:id",
+    element: <Dashboard />,
     errorElement: <Home />
   },
 ]);
