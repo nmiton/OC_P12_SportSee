@@ -14,7 +14,7 @@ export default function Header() {
 		<HeaderSportSee>
 			<nav>
 				<ul>
-					<li><img alt="logo" src={logo} /></li>
+					<li onClick={handleClickNavigateHome}><img alt="logo" src={logo} /></li>
 					<li onClick={handleClickNavigateHome}>Accueil</li>
 					<li>Profil</li>
 					<li>Réglage</li>

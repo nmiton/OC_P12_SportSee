@@ -7,8 +7,6 @@ export default class formatData {
 	 * @return Un objet de données composé d'un seul objet avec toutes les propriétés formatées.
 	 */
 	constructor(obj: any) {
-		const acc = {};
-
 		// Joindre les objets et formater la propriété 'kind'
 		obj = this.joinObj(obj);
 		obj = this.formatKind(obj);

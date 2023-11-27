@@ -11,7 +11,7 @@ import {
 } from 'recharts';
 
 export default function ChartBar({ data }: { data: Array<object> }) {
-	
+	console.log(data)
 	return (
 		<Container>
 			<div className="flex-head">
@@ -23,20 +23,16 @@ export default function ChartBar({ data }: { data: Array<object> }) {
 			</div>
 			<ResponsiveContainer width="100%" height="100%">
 				<BarChart data={data}>
-					<CartesianGrid strokeDasharray="2 2" horizontal={true}
-						vertical={false} />
-					<XAxis dataKey="name" axisLine={false} tickLine={false} />
-					<YAxis orientation="right" axisLine={false} tickLine={false} />
-
+					<CartesianGrid strokeDasharray="2 2" horizontal={true} vertical={false} />
+					<XAxis dataKey="" axisLine={false} tickLine={false} tickFormatter={(index) => index + 1} tickMargin={18} tick={{ fill: '#9B9EAC' }}/>
+					<YAxis orientation="right" axisLine={false} tickLine={false} tick={{ fill: '#9B9EAC' }}/>
 					<Tooltip
 						offset={40}
 						wrapperStyle={{ outline: "none", fontWeight: 600 }}
 						content={<CustomTooltip />}
 					/>
-					<Bar dataKey="kilogram" name="kg" fill="black" radius={[10, 10, 0, 0]}
-						barSize={10} />
-					<Bar dataKey="calories" name="kCal" fill="red" radius={[10, 10, 0, 0]}
-						barSize={10} />
+					<Bar dataKey="kilogram" name="kg" fill="black" radius={[10, 10, 0, 0]} barSize={10} />
+					<Bar dataKey="calories" name="kCal" fill="red" radius={[10, 10, 0, 0]} barSize={10} />
 				</BarChart>
 			</ResponsiveContainer>
 		</Container>
@@ -118,7 +114,3 @@ const Container = styled.div`
 		align-items: center;
 	}
 `;
-
-
-
-
