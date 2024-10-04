@@ -1,19 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import meditation from "./mediatation.svg";
-import swim from "./swim.svg";
-import bike from "./bike.svg";
-import bodyBuilding from "./bodybuilding.svg";
-
 export default function Sidebar() {
 
 	return (
 		<SidebarSportSee>
-			<ContainerIcon><img src={meditation}></img></ContainerIcon>
-			<ContainerIcon><img src={swim}></img></ContainerIcon>
-			<ContainerIcon><img src={bike}></img></ContainerIcon>
-			<ContainerIcon><img src={bodyBuilding}></img></ContainerIcon>
+			<ContainerIcon><img src="assets/img/mediatation.svg"></img></ContainerIcon>
+			<ContainerIcon><img src="assets/img/swim.svg"></img></ContainerIcon>
+			<ContainerIcon><img src="assets/img/bike.svg"></img></ContainerIcon>
+			<ContainerIcon><img src="assets/img/bodybuilding.svg"></img></ContainerIcon>
 			<Copyright>Copyright, SportSee 2020</Copyright>
 		</SidebarSportSee>
 	);

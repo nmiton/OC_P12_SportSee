@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from "./logo.svg";
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,7 +13,7 @@ export default function Header() {
 		<HeaderSportSee>
 			<nav>
 				<ul>
-					<li onClick={handleClickNavigateHome}><img alt="logo" src={logo} /></li>
+					<li onClick={handleClickNavigateHome}><img alt="logo" src="assets/img/logo.svg" /></li>
 					<li onClick={handleClickNavigateHome}>Accueil</li>
 					<li>Profil</li>
 					<li>Réglage</li>

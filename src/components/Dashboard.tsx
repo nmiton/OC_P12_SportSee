@@ -1,16 +1,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import useData from "../../hooks/useData";
+import useData from "../hooks/useData";
 
-import { GlobalStyles } from "../../GlobalStyles";
-import Header from "../Header/Header";
-import Title from "../Title/Title";
-import ChartBar from "../ChartBar/CharBar";
-import ChartLine from "../ChartLine/ChartLine";
-import ChartRadar from "../ChartRadar/ChartRadar";
-import ChartScore from "../ChartScore/ChartScore";
-import CardStat from "../CardStat/Stats";
-import Sidebar from "../Sidebar/Siderbar";
+import { GlobalStyles } from "../GlobalStyles";
+import Header from "./Header";
+import Title from "./Title";
+import ChartBar from "./Graphs/CharBar";
+import ChartLine from "./Graphs/ChartLine";
+import ChartRadar from "./Graphs/ChartRadar";
+import ChartScore from "./Graphs/ChartScore";
+import CardStat from "./CardStat";
+import Sidebar from "./siderbar";
+
 
 export default function Dashboard() {
     const { id } = useParams();

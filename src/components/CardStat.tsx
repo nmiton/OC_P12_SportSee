@@ -1,9 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import calories from "./calories-icon.svg";
-import proteines from "./protein-icon.svg";
-import glucides from "./carbs-icon.svg";
-import lipides from "./fat-icon.svg";
 
 interface CardProps {
 	type: "Calories" | "Proteines" | "Glucides" | "Lipides";
@@ -12,27 +8,27 @@ interface CardProps {
 
 export default function CardStat({ type, weight }: CardProps) {
 
-	let svg: string = "";
+	let src: string = "";
 
 	switch (type) {
 		case 'Calories':
-			svg = calories;
+			src = "assets/icon/calories-icon.svg";
 			break;
 		case 'Proteines':
-			svg = proteines;
+			src = "assets/icon/protein-icon.svg";
 			break;
 		case 'Glucides':
-			svg = glucides;
+			src = "assets/icon/carbs-icon.svg";
 			break;
 		case 'Lipides':
-			svg = lipides;
+			src = "assets/icon/fat-icon.svg";
 			break;
 	}
 
 	return (
 		<Stat>
 			<div className="flex">
-				<img src={svg}></img>
+				<img src={src}></img>
 				<div className="flex-text">
 					<h3>
 						{weight}

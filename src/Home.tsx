@@ -1,9 +1,9 @@
 import React from "react";
 import { GlobalStyles } from "./GlobalStyles";
 
-import Header from "./components/Header/Header";
-import SideBar from "./components/Sidebar/Siderbar";
-import Navigation from "./components/Navigation/Navigation";
+import Header from "./components/Header"
+import Navigation from "./components/Navigation";
+import Sidebar from "./components/siderbar";
 
 export default function Home() {
 
@@ -12,7 +12,7 @@ export default function Home() {
 			<GlobalStyles />
 			<Header />
 				<Navigation/>
-			<SideBar />
+			<Sidebar />
 		</>
 	);
 };
