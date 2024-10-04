@@ -1,10 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-
-export default function ChartRadar({data}) {
-	
-	const polarGrid: boolean = false;
+import React from "react"
+import styled from "styled-components"
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from "recharts"
+/**
+ * Function to render ChartRadar
+ * @param {Array} data - Array of data to show
+ * @returns {JSX.Element}
+ */
+export default function ChartRadar({ data }: { data: Array<object> }): JSX.Element {
+	const polarGrid: boolean = false
 
 	return (
 		<CustomRadar>
@@ -21,20 +24,21 @@ export default function ChartRadar({data}) {
 }
 
 const CustomRadar = styled.div`
-	display:flex;
-	background: #020203; 
+	display: flex;
+	background: #020203;
 	border-radius: 5px;
 	height: 263px;
 	min-width: 240px;
 	opacity: 0.9;
 
-	tspan,.tspan {
+	tspan,
+	.tspan {
 		text-align: left;
-		position:absolute;
+		position: absolute;
 		margin-top: 10%;
 		font-family: Roboto, sans-serif;
-		font-size: 12px; 
+		font-size: 12px;
 		font-weight: 500;
-		fill: #FFFFFF; 	
+		fill: #ffffff;
 	}
-`; 
+`

@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components"
-
+/**
+ * Const to defines global styles of project
+ */
 export const GlobalStyles = createGlobalStyle`
 html,
 * {
@@ -144,4 +146,4 @@ body {
 
 }
 
-`;
+`

@@ -1,28 +1,35 @@
-import React from "react";
-import styled from "styled-components";
-
+import React from "react"
+import styled from "styled-components"
+/**
+ * Interface to define props type
+ */
 interface CardProps {
-	type: "Calories" | "Proteines" | "Glucides" | "Lipides";
-	weight: number;
+	type: "Calories" | "Proteines" | "Glucides" | "Lipides"
+	weight: number
 }
-
-export default function CardStat({ type, weight }: CardProps) {
-
-	let src: string = "";
+/**
+ * Component to render a CardStat with a specific type and weight
+ * @param {Object} props - Component props
+ * @param {Number} props.type - Type of the card stat
+ * @param {Number} props.weight - Numeric value representing the weight
+ * @returns {JSX.Element}
+ */
+export default function CardStat({ type, weight }: CardProps): JSX.Element {
+	let src: string = ""
 
 	switch (type) {
-		case 'Calories':
-			src = "assets/icon/calories-icon.svg";
-			break;
-		case 'Proteines':
-			src = "assets/icon/protein-icon.svg";
-			break;
-		case 'Glucides':
-			src = "assets/icon/carbs-icon.svg";
-			break;
-		case 'Lipides':
-			src = "assets/icon/fat-icon.svg";
-			break;
+		case "Calories":
+			src = "../public/assets/icon/calories-icon.svg"
+			break
+		case "Proteines":
+			src = "../public/assets/icon/protein-icon.svg"
+			break
+		case "Glucides":
+			src = "../public/assets/icon/carbs-icon.svg"
+			break
+		case "Lipides":
+			src = "../public/assets/icon/fat-icon.svg"
+			break
 	}
 
 	return (
@@ -32,7 +39,7 @@ export default function CardStat({ type, weight }: CardProps) {
 				<div className="flex-text">
 					<h3>
 						{weight}
-						{type === 'Calories' ? "kCal" : "g"}
+						{type === "Calories" ? "kCal" : "g"}
 					</h3>
 					<h4>{type}</h4>
 				</div>
@@ -78,5 +85,4 @@ const Stat = styled.div`
 			font-weight: 600;
 		}
 	}
-`;
-
+`

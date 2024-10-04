@@ -1,12 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-
-export default function ChartScore({ score }: { score: number }) {
-	
-	const data = [
-		{ name: 'Score', value: score * 100 },
-	];
+import React from "react"
+import styled from "styled-components"
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts"
+/**
+ * Function to render ChartScore
+ * @param {Number} score - Score number
+ * @returns {JSX.Element}
+ */
+export default function ChartScore({ score }: { score: number }): JSX.Element {
+	const data = [{ name: "Score", value: score * 100 }]
 
 	return (
 		<CustomScore>
@@ -25,7 +26,6 @@ export default function ChartScore({ score }: { score: number }) {
 						dataKey="value"
 						cornerRadius={10}
 					>
-
 						<Cell stroke="" fill="red" />
 					</Pie>
 				</PieChart>
@@ -37,12 +37,12 @@ export default function ChartScore({ score }: { score: number }) {
 				<div className="message">objectif</div>
 			</div>
 		</CustomScore>
-	);
+	)
 }
 
 const CustomScore = styled.div`
 	position: relative;
-	background: #FBFBFB; 
+	background: #fbfbfb;
 	border-radius: 5px;
 	height: 263px;
 	min-width: 240px;
@@ -54,10 +54,9 @@ const CustomScore = styled.div`
 		margin-left: 24px;
 		color: black;
 		font-family: Roboto, sans-serif;
-		font-size: 15px; 
+		font-size: 15px;
 		font-weight: 700;
 	}
-
 
 	.bgScore {
 		display: flex;
@@ -75,21 +74,21 @@ const CustomScore = styled.div`
 		transform: translate(-50%, -50%);
 		border-radius: 50%;
 		z-index: -1;
-		background-color: #FFFFFF;
+		background-color: #ffffff;
 
-		.percentage { 
+		.percentage {
 			font-family: Roboto, sans-serif;
-			font-size: 26px; 
+			font-size: 26px;
 			font-weight: 700;
 			color: black;
 		}
 
-		.message { 
+		.message {
 			font-family: Roboto, sans-serif;
-			font-size: 16px; 
+			font-size: 16px;
 			font-weight: 600;
 			color: black;
 			opacity: 0.6;
 		}
 	}
-`; 
+`
