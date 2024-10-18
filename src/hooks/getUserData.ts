@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react"
 import formatData from "../utils/formatData"
+import fetchUserData from "../services/fetchUserData"
+import { mockUserData } from "../services/mockUserData"
 /**
  * Function to get data for an user
  * @param {Number} userID - String to define user ID
  * @returns
  */
 export default function getUserData(userID: number) {
-	const api_path = "http://localhost:3000/user"
 	let tmpData: any[] = []
+
+	const MOCK_DATA = import.meta.env.VITE_APP_USE_MOCK === "true"
 
 	const [loading, setLoading] = useState<boolean>(true)
 	const [error, setError] = useState<string | null>(null)
@@ -19,13 +22,7 @@ export default function getUserData(userID: number) {
 			setError(null)
 
 			try {
-				const userR: Promise<Response> = fetch(`${api_path}/${userID}`)
-				const activityR: Promise<Response> = fetch(`${api_path}/${userID}/activity`)
-				const avgSessionR: Promise<Response> = fetch(`${api_path}/${userID}/average-sessions`)
-				const performanceR: Promise<Response> = fetch(`${api_path}/${userID}/performance`)
-				const promises: Promise<Response>[] = [userR, activityR, avgSessionR, performanceR]
-
-				const responses: Response[] = await Promise.all(promises)
+				const responses: Response[] = MOCK_DATA ? await mockUserData(userID) : await fetchUserData(userID)
 
 				for (let response of responses) {
 					if (!response.ok) {

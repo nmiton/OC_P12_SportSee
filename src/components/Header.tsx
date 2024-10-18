@@ -13,7 +13,7 @@ export default function Header(): JSX.Element {
 			<nav>
 				<ul>
 					<li onClick={() => navigate("/")}>
-						<img alt="logo" src="assets/img/logo.svg" />
+						<img alt="logo" src="../public/assets/img/logo.svg" />
 					</li>
 					<li onClick={() => navigate("/")}>Accueil</li>
 					<li>Profil</li>
